@@ -17,6 +17,7 @@ function fileIncludeTask() {// 整理html的代码片段的任务
         .pipe(dest('./dist/view'));
 }
 
+
 function htmlMinTask() {// 压缩html的代码片段的任务??
     return src('./src/view/*.html')
         .pipe(fileInclude({
@@ -59,6 +60,10 @@ function libTask() { //更新lib的任务
 function staticTask() { //更新static的任务
     return src('./src/static/**')
         .pipe(dest('./dist/static'));
+}
+
+function htmlTask() {// 更新html的任务
+    
 }
 
 function webserverTask() { // 开启web服务器(在浏览器中预览编写的代码)
